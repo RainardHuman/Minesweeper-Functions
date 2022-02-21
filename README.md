@@ -1,2 +1,0 @@
-# Minesweeper-Functions
-Minesweeper-Functions
