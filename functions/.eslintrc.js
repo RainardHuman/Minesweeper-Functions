@@ -31,5 +31,7 @@ module.exports = {
     'no-trailing-spaces': 0,
     'no-unused-vars': 0,
     'max-len': ['error', {'code': 160}],
+    'no-empty-function': 'off',
+    '@typescript-eslint/no-empty-function': ['off'],
   },
 };
