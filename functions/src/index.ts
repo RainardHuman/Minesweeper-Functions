@@ -6,7 +6,9 @@ import {GenerateGameRequest, LogRequest} from './interfaces/request.interface';
 admin.initializeApp();
 
 exports.generateGame = functions.https.onCall(async (request) => {
-  const {size, mines} = request.body as GenerateGameRequest;
+  functions.logger.error('request', request);
+
+  const {size, mines} = request as GenerateGameRequest;
 
   if (size >= 4 && mines >= 1) {
     const result = await admin
@@ -23,7 +25,7 @@ exports.generateGame = functions.https.onCall(async (request) => {
 });
 
 exports.log = functions.https.onCall((request) => {
-  const {level, message, data} = request.body as LogRequest;
+  const {level, message, data} = request as LogRequest;
   switch (level) {
     case 'warn': functions.logger.warn(message, data); break;
     case 'error': functions.logger.error(message, data); break;
