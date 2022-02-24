@@ -18,20 +18,21 @@ module.exports = {
     sourceType: 'module',
   },
   ignorePatterns: [
-    '/lib/**/*', // Ignore built files.
+    '/lib/**/*',
   ],
   plugins: [
     '@typescript-eslint',
     'import',
   ],
   rules: {
-    'quotes': ['error', 'single'],
+    'quotes': [2, 'single'],
     'import/no-unresolved': 0,
     'require-jsdoc': 0,
     'no-trailing-spaces': 0,
     'no-unused-vars': 0,
-    'max-len': ['error', {'code': 160}],
-    'no-empty-function': 'off',
-    '@typescript-eslint/no-empty-function': ['off'],
+    'max-len': [2, {'code': 160}],
+    'no-empty-function': 0,
+    '@typescript-eslint/no-empty-function': [0],
+    'linebreak-style': [0, 'windows'],
   },
 };
