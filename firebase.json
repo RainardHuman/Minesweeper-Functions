@@ -16,6 +16,7 @@
       "port": 8080
     },
     "storage": {
+      "rules": "storage.rules",
       "port": 9199
     },
     "ui": {
